@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booklist</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--  -->
+      <div class="booklistWrap">
+        <header>
+          <h1>Book List</h1>
+        </header>
+        <!--  -->
+        <form action="">
+          <label for="">Title</label>
+          <input type="text" class="title" required />
+          <label for="">Author</label>
+          <input type="text" class="author" required />
+          <label for="">ISBN</label>
+          <input type="text" class="isbn" required />
+          <button type="submit">submit</button>
+        </form>
+        <!--  -->
+        <div class="outputSection">
+          <table border="1">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody class="outputDisplay"></tbody>
+          </table>
+        </div>
+      </div>
+      <footer>
+        <p>&copy;2024 Bacode Inc.</p>
+      </footer>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
