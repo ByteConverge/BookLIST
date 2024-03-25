@@ -20,21 +20,22 @@ outputSection.addEventListener("click" , event=>{
  let clicked = event.target;
  if(clicked.tagName === "SPAN"){
     clicked.parentElement.parentElement.classList.add("d-None")
+    setTimeout(() => {
+      let message = document.createElement("h1");
+      message.innerHTML = "Book removed from list";
+      message.style.background = "red";
+      message.style.color = "white";
+      message.style.fontSize = "1rem";
+      appendBtn.insertBefore(message , titleUI.previousElementSibling)
+      setTimeout(() => {
+        message.style.display = "none"
+      },500);
+      
+    }, 100);
+    
  }
 
- setTimeout(() => {
-   let message = document.createElement("h1");
-   message.innerHTML = "Book removed from list";
-   message.style.background = "red";
-   message.style.color = "white";
-   message.style.fontSize = "1rem";
-   appendBtn.insertBefore(message , titleUI.previousElementSibling)
-   setTimeout(() => {
-     message.style.display = "none"
-   },500);
-   
- }, 100);
- 
+
 
 })
 
